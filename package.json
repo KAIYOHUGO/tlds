@@ -11,7 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/function-xyz/webtest.git"
   },
-  "keywords": ["static", "template", "codesandbox"],
+  "keywords": [
+    "static",
+    "template",
+    "codesandbox"
+  ],
   "author": "Ives van Hoorne",
   "license": "MIT",
   "bugs": {
@@ -20,5 +24,8 @@
   "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
     "serve": "^11.2.0"
+  },
+  "dependencies": {
+    "firebase-tools": "8.4.3"
   }
 }

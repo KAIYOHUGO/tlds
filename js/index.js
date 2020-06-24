@@ -19,7 +19,7 @@ var fire = firebase.initializeApp(firebaseConfig);
  */
 function login_read() {
   GoogleLogin().then(function() {
-    window.location = "readNote.html";
+    window.location = "html/readNote.html";
   });
 }
 

@@ -44,10 +44,10 @@ function Back_search(array_fi) {
     return new Function("x", "return (new RegExp('" + x + "').test(x));");
   });
   function test_al(x) {
-    for (var t; t < array_fi.length; t++) {
+    for (var t = 0; t < array_fi.length; t++) {
       if (!array_fi[t](x)) {
         return false;
-        break;
+        //break;
       }
     }
     return true;
@@ -66,8 +66,13 @@ function Back_search(array_fi) {
     var key = x.key;
     pre_app.innerHTML += `
     <li>
-      <p>author:${author_name}</p>
-      <button onclick="display_content('${key}')">More</button>
+      <p>author_name:${author_name}</p>
+      <p>author_photo:${author_photo}</p>
+      <p>introduce:${introduction}</p>
+      <p>title:${title}</p>
+      <p>tag:${tags.join(",")}</p>
+      <p>time:${time}</p>
+      <button onclick="display_content('${key}')">display_content('${key}')</button>
     </li>
     `;
   });
@@ -109,7 +114,14 @@ function display_content(key) {
   var image = x.image.split("%*@"); //array - the path in storage
   var time = x.timeStamp;
   pre_app.innerHTML = `
-  <p>作者 : ${author_name}</p>
+  <p>author_name:${author_name}</p>
+  <p>author_photo:${author_photo}</p>
+  <p>introduce:${introduction}</p>
+  <p>title:${title}</p>
+  <p>tag:${tags.join(",")}</p>
+  <p>time:${time}</p>
+  <p>wait a while,the picture is coming from the storage.</p>
+  <button onclick="Back_search([])">Back_search([])</button>
   <!--省略-->
   `;
   image = image.map(function(x) {
