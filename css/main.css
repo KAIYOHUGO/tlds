@@ -1,0 +1,17 @@
+#bg {
+  background-image: url("../files/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  height: 100%;
+}
+body {
+  background-color: gray;
+}
+#footer {
+  background-color: whitesmoke;
+}
+.unv {
+  display: none;
+}
