@@ -25,7 +25,5 @@
   "devDependencies": {
     "serve": "^11.2.0"
   },
-  "dependencies": {
-    "firebase-tools": "8.4.3"
-  }
+  "dependencies": {}
 }
