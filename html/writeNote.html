@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      async
+    ></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script src="../js/writeNote.js"></script>
+    <script src="../js/storage.js"></script>
+  </head>
+  <body>
+    <style src="../css/main.css" crossorigin="anonymous"></style>
+    <div id="top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html">特立讀行</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../html/index.html"
+                >主頁 <span class="sr-only">home</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../files/help.pdf"
+                >幫助 <span class="sr-only">help</span></a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="javascript:log_out();"
+                >登出 <span class="sr-only">log out</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="wrapper">
+      <form onsubmit="return false">
+        <div class="form-group tick_">
+          <label>檔案:(多選)</label>
+          <input
+            type="file"
+            class="form-control"
+            id="photo"
+            accept="image/*"
+            multiple
+          />
+        </div>
+        <div class="form-group">
+          <label>標題:</label>
+          <input type="textarea" class="form-control" id="introduce" />
+        </div>
+        <div class="form-group">
+          <label>簡介:</label>
+          <textarea
+            type="textarea"
+            class="form-control"
+            id="content"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label>標籤:</label>
+          <input
+            type="textarea"
+            class="form-control"
+            id="sort"
+            placeholder="請用空格格開"
+          />
+        </div>
+        <div class="checkbox">
+          <label
+            ><input type="checkbox" id="term-ap" />同意<a href="javascript:b();"
+              >條款</a
+            ></label
+          >
+        </div>
+        <button
+          type="submit"
+          class="btn btn-warning"
+          id="upload"
+          onclick="up_load_t()"
+        >
+          送出
+        </button>
+      </form>
+    </div>
+    <div style="display:none" id="term" class="term">
+      <button
+        type="button"
+        class="btn btn-success"
+        id="term-back"
+        onclick="c()"
+      >
+        返回
+      </button>
+      <h4>條款</h4>
+      <p>一旦你按下"送出"表示你同意:</p>
+      <small>
+        <ul>
+          <li>我們對內容做任何利用(不含營利目的)</li>
+          <li>我們對內容(含檔案和文字)做不違反文章原意的更改</li>
+        </ul>
+        <small>
+          <p><del>我覺得沒幾個人會看，大概直接打勾了。</del></p>
+        </small>
+      </small>
+    </div>
+    <link
+      rel="stylesheet"
+      href="../css/writeNote.css"
+      crossorigin="anonymous"
+    />
+  </body>
+</html>

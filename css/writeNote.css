@@ -1,0 +1,28 @@
+.wrapper {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+textarea {
+  resize: none;
+}
+.term {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px black solid;
+  background-color: white;
+  outline: none;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+#term-back {
+  float: right;
+}
+.tick_ > input {
+  margin-top: 0.5em;
+  padding-bottom: 2.4em;
+}

@@ -1,0 +1,63 @@
+#loading {
+  background-image: url("../files/bg.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.tag-s {
+  margin-bottom: 2px;
+  margin-left: 2px;
+  border-radius: 0.5em;
+  border-color: black;
+  background-color: orangered;
+  border-block-start-width: 1px;
+  text-overflow: ellipsis;
+  float: right;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+.img-scale {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 5px;
+}
+.wrapper {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+textarea {
+  resize: none;
+}
+.term {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  z-index: 99;
+  font-size: 18px;
+  border: 1px black solid;
+  background-color: white;
+  outline: none;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+#term-back {
+  float: right;
+}
+.tick_ > input {
+  margin-top: 0.5em;
+  padding-bottom: 2.4em;
+}
+.ctrl-pal {
+  padding-left: 10%;
+}
